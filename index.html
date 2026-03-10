@@ -6,7 +6,60 @@
 <title>Portfólio | Designer Gráfico</title>
 
 <style>
+.projects-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+}
 
+.project {
+overflow: hidden;
+border-radius: 22px;
+background: var(--card);
+border: 1px solid var(--line);
+box-shadow: var(--shadow);
+transition: 0.2s ease;
+}
+
+.project:hover {
+transform: translateY(-4px);
+}
+
+.project-image {
+aspect-ratio: 16 / 11;
+background-size: cover;
+background-position: center;
+}
+
+.project-content {
+padding: 18px;
+}
+
+.project-content h3 {
+margin-bottom: 8px;
+font-size: 1.1rem;
+}
+
+.project-content p {
+color: var(--muted);
+font-size: 0.95rem;
+margin-bottom: 14px;
+}
+
+.project-links {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+}
+
+.small-btn {
+padding: 10px 12px;
+border-radius: 12px;
+border: 1px solid var(--line);
+background: rgba(255,255,255,0.03);
+font-size: 0.9rem;
+font-weight: 600;
+}
 :root {
 --bg: #0b0d12;
 --card: #121722;
