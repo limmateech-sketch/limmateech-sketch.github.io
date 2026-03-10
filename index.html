@@ -1,348 +1,668 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio | Designer Gráfico</title>
-  <style>
-    :root {
-      --bg: #0b0d12;
-      --card: #121722;
-      --card-2: #171d2a;
-      --text: #f5f7fb;
-      --muted: #a8b0c0;
-      --line: rgba(255,255,255,0.08);
-      --accent: #ff6a00;
-      --accent-2: #ff9f43;
-      --shadow: 0 20px 60px rgba(0,0,0,0.35);
-      --radius: 22px;
-      --max: 1120px;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfólio | Designer Gráfico</title>
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+<style>
 
-    body {
-      margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top right, rgba(255,106,0,0.18), transparent 25%),
-        radial-gradient(circle at left center, rgba(255,159,67,0.10), transparent 22%),
-        var(--bg);
-      line-height: 1.6;
-    }
+:root {
+--bg: #0b0d12;
+--card: #121722;
+--card-2: #171d2a;
+--text: #f5f7fb;
+--muted: #a8b0c0;
+--line: rgba(255,255,255,0.08);
 
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
+--accent: #ff6a00;
+--accent-2: #ff9f43;
 
-    .container {
-      width: min(calc(100% - 32px), var(--max));
-      margin: 0 auto;
-    }
+--shadow: 0 20px 60px rgba(0,0,0,0.35);
+--radius: 22px;
+--max: 1120px;
+}
 
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(14px);
-      background: rgba(11, 13, 18, 0.72);
-      border-bottom: 1px solid var(--line);
-    }
+* { box-sizing: border-box; }
 
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0;
-      gap: 16px;
-    }
+html { scroll-behavior: smooth; }
 
-    .brand {
-      font-size: 1.05rem;
-      font-weight: 800;
-      letter-spacing: 0.3px;
-    }
+body {
+margin: 0;
+font-family: Inter, Arial, Helvetica, sans-serif;
+color: var(--text);
+background:
+radial-gradient(circle at top right, rgba(255,106,0,0.18), transparent 25%),
+radial-gradient(circle at left center, rgba(255,159,67,0.10), transparent 22%),
+var(--bg);
+line-height: 1.6;
+}
 
-    .brand span { color: var(--accent); }
+a { color: inherit; text-decoration: none; }
 
-    .menu {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
+img { max-width: 100%; display: block; }
 
-    .menu a:hover { color: var(--text); }
+.container {
+width: min(calc(100% - 32px), var(--max));
+margin: 0 auto;
+}
 
-    .hero {
-      padding: 72px 0 42px;
-    }
+.nav {
+position: sticky;
+top: 0;
+z-index: 100;
+backdrop-filter: blur(14px);
+background: rgba(11, 13, 18, 0.72);
+border-bottom: 1px solid var(--line);
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      align-items: center;
-    }
+.nav-inner {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 16px 0;
+gap: 16px;
+}
 
-    .hero-card, .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-    }
+.brand {
+font-size: 1.05rem;
+font-weight: 800;
+letter-spacing: 0.3px;
+}
 
-    .hero-card {
-      padding: 42px;
-    }
+.brand span { color: var(--accent); }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid rgba(255,106,0,0.28);
-      background: rgba(255,106,0,0.12);
-      color: #ffd3ad;
-      border-radius: 999px;
-      padding: 8px 14px;
-      font-size: 0.86rem;
-      margin-bottom: 18px;
-    }
+.menu {
+display: flex;
+gap: 18px;
+flex-wrap: wrap;
+font-size: 0.95rem;
+color: var(--muted);
+}
 
-    h1, h2, h3, p { margin-top: 0; }
+.menu a:hover { color: var(--text); }
 
-    h1 {
-      font-size: clamp(2.2rem, 4vw, 4.6rem);
-      line-height: 1.05;
-      margin-bottom: 16px;
-      letter-spacing: -1.8px;
-    }
+.hero {
+padding: 72px 0 42px;
+}
 
-    .lead {
-      font-size: 1.08rem;
-      color: var(--muted);
-      max-width: 58ch;
-      margin-bottom: 26px;
-    }
+.hero-grid {
+display: grid;
+grid-template-columns: 1.15fr 0.85fr;
+gap: 28px;
+align-items: center;
+}
 
-    .cta-row {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
+.hero-card, .card {
+background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+border: 1px solid var(--line);
+box-shadow: var(--shadow);
+border-radius: var(--radius);
+}
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 18px;
-      border-radius: 14px;
-      font-weight: 700;
-      border: 1px solid var(--line);
-      transition: 0.2s ease;
-    }
+.hero-card {
+padding: 42px;
+}
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #ff9f43);
-      border-color: transparent;
-    }
+.eyebrow {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+border: 1px solid rgba(255,106,0,0.28);
+background: rgba(255,106,0,0.12);
+color: #ffd3ad;
+border-radius: 999px;
+padding: 8px 14px;
+font-size: 0.86rem;
+margin-bottom: 18px;
+}
 
-    .btn-secondary {
-      background: rgba(255,255,255,0.03);
-      color: var(--text);
-    }
+h1, h2, h3, p { margin-top: 0; }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.05);
-    }
+h1 {
+font-size: clamp(2.2rem, 4vw, 4.6rem);
+line-height: 1.05;
+margin-bottom: 16px;
+letter-spacing: -1.8px;
+}
 
-    .mini-info {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+.lead {
+font-size: 1.08rem;
+color: var(--muted);
+max-width: 58ch;
+margin-bottom: 26px;
+}
 
-    .profile-card {
-      padding: 22px;
-    }
+.cta-row {
+display: flex;
+gap: 14px;
+flex-wrap: wrap;
+margin-bottom: 18px;
+}
 
-    .profile-box {
-      background: linear-gradient(180deg, rgba(255,106,0,0.18), rgba(255,255,255,0.04));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-      overflow: hidden;
-    }
+.btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-height: 48px;
+padding: 0 18px;
+border-radius: 14px;
+font-weight: 700;
+border: 1px solid var(--line);
+transition: 0.2s ease;
+}
 
-    .profile-photo {
-      aspect-ratio: 4 / 4.5;
-      background:
-        linear-gradient(rgba(11,13,18,0.18), rgba(11,13,18,0.25)),
-        url('images/perfil.jpg?v=2') center/cover no-repeat,
-        linear-gradient(135deg, #2a3142, #151a24);
-    }
+.btn-primary {
+background: linear-gradient(135deg, var(--accent), #ff9f43);
+border-color: transparent;
+}
 
-    .profile-content {
-      padding: 22px;
-    }
+.btn-secondary {
+background: rgba(255,255,255,0.03);
+color: var(--text);
+}
 
-    .role {
-      color: var(--accent-2);
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
+.btn:hover {
+transform: translateY(-2px);
+filter: brightness(1.05);
+}
 
-    .profile-content p {
-      color: var(--muted);
-      margin-bottom: 0;
-    }
+.mini-info {
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+color: var(--muted);
+font-size: 0.95rem;
+}
 
-    .section {
-      padding: 28px 0 10px;
-    }
+.profile-card {
+padding: 22px;
+}
 
-    .section-title {
-      font-size: clamp(1.6rem, 2vw, 2.4rem);
-      margin-bottom: 8px;
-      letter-spacing: -0.8px;
-    }
+.profile-box {
+background: linear-gradient(180deg, rgba(255,106,0,0.18), rgba(255,255,255,0.04));
+border: 1px solid rgba(255,255,255,0.08);
+border-radius: 22px;
+overflow: hidden;
+}
 
-    .about-grid, .resume-grid, .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-    }
+.profile-photo {
+aspect-ratio: 4 / 4.5;
+background:
+linear-gradient(rgba(11,13,18,0.18), rgba(11,13,18,0.25)),
+url('images/perfil.jpg') center/cover no-repeat,
+linear-gradient(135deg, #2a3142, #151a24);
+}
 
-    .card {
-      padding: 26px;
-    }
+.profile-content {
+padding: 22px;
+}
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 18px;
-    }
+.role {
+color: var(--accent-2);
+font-weight: 700;
+margin-bottom: 10px;
+}
 
-    .stat {
-      background: var(--card-2);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 18px;
-    }
+.profile-content p {
+color: var(--muted);
+margin-bottom: 0;
+}
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-    }
+.section {
+padding: 28px 0 10px;
+}
 
-    .tag {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--line);
-      font-size: 0.92rem;
-    }
+.section-title {
+font-size: clamp(1.6rem, 2vw, 2.4rem);
+margin-bottom: 8px;
+letter-spacing: -0.8px;
+}
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
+.section-subtitle {
+color: var(--muted);
+margin-bottom: 24px;
+max-width: 68ch;
+}
 
-    .project {
-      overflow: hidden;
-      border-radius: 22px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      transition: 0.2s ease;
-    }
+.about-grid, .resume-grid, .contact-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 22px;
+}
 
-    .project:hover {
-      transform: translateY(-4px);
-    }
+.card {
+padding: 26px;
+}
 
-    .project-image {
-      aspect-ratio: 16 / 11;
-      background-size: cover;
-      background-position: center;
-    }
+.stats {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 14px;
+margin-top: 18px;
+}
 
-    .project-content {
-      padding: 18px;
-    }
+.stat {
+background: var(--card-2);
+border: 1px solid var(--line);
+border-radius: 18px;
+padding: 18px;
+}
 
-    .project-links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+.stat strong {
+display: block;
+font-size: 1.6rem;
+margin-bottom: 6px;
+}
 
-    .small-btn {
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
+.muted { color: var(--muted); }
 
-    .timeline {
-      display: grid;
-      gap: 16px;
-    }
+.skills {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-top: 14px;
+}
 
-    .timeline-item {
-      border-left: 2px solid rgba(255,106,0,0.35);
-      padding-left: 16px;
-    }
+.tag {
+padding: 10px 14px;
+border-radius: 999px;
+background: rgba(255,255,255,0.04);
+border: 1px solid var(--line);
+font-size: 0.92rem;
+}
 
-    .contact-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 8px;
-    }
-
-    .contact-item {
-      padding: 16px;
-      border-radius: 16px;
-      background: var(--card-2);
-      border: 1px solid var(--line);
-      word-break: break-word;
-    }
-
-    footer {
-      padding: 30px 0 50px;
-      color: var(--muted);
-      text-align: center;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 960px) {
-      .hero-grid,
-      .about-grid,
-      .resume-grid,
-      .contact-grid,
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-<!-- TODO: TODO O RESTANTE DO HTML PERMANECE EXATAMENTE IGUAL AO SEU ORIGINAL
-     (nav, hero, sobre, projetos, currículo, contato e footer) -->
+<nav class="nav">
+<div class="container nav-inner">
+
+<a href="#inicio" class="brand">
+Portfólio<span>.</span>Design
+</a>
+
+<div class="menu">
+<a href="#sobre">Sobre</a>
+<a href="#projetos">Projetos</a>
+<a href="#curriculo">Currículo</a>
+<a href="#contato">Contato</a>
+</div>
+
+</div>
+</nav>
+
+<header class="hero" id="inicio">
+
+<div class="container hero-grid">
+
+<div class="hero-card">
+
+<div class="eyebrow">Designer Gráfico • Portfólio + Currículo</div>
+
+<h1>
+Crio identidades visuais, peças digitais e apresentações com visual profissional.
+</h1>
+
+<p class="lead">
+Olá, meu nome é <strong>Ailton Lima Junior</strong>.
+Sou designer gráfico com foco em Web Design, social media, materiais promocionais e design para apresentações.
+Este site reúne meus principais projetos, habilidades e experiências.
+</p>
+
+<div class="cta-row">
+<a class="btn btn-primary" href="#projetos">Ver projetos</a>
+<a class="btn btn-secondary" href="#contato">Falar comigo</a>
+</div>
+
+<div class="mini-info">
+<span>📍 Salvador - BA</span>
+<span>🎯 Freelancer / Portfólio profissional</span>
+<span>🖥️ GitHub Pages</span>
+</div>
+
+</div>
+
+<div class="profile-card card">
+
+<div class="profile-box">
+
+<div class="profile-photo"></div>
+
+<div class="profile-content">
+<div class="role">Designer Gráfico</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="section" id="sobre">
+
+<div class="container">
+
+<h2 class="section-title">Sobre mim</h2>
+
+<p class="section-subtitle"></p>
+
+<div class="about-grid">
+
+<div class="card">
+
+<h3>Apresentação profissional</h3>
+
+<p class="muted">
+Técnico em informática e estudante de back-end em python, graduado em design gráfico e apaixonado por criar soluções visuais que unem estética, comunicação e estratégia. Tenho experiência de posts para redes sociais, banners, identidade visual e layouts profissionais.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<strong>+20</strong>
+<span class="muted">Projetos realizados</span>
+</div>
+
+<div class="stat">
+<strong>4+</strong>
+<span class="muted">Áreas de atuação</span>
+</div>
+
+<div class="stat">
+<strong>100%</strong>
+<span class="muted">Foco em apresentação visual</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Habilidades</h3>
+
+<p class="muted"></p>
+
+<div class="skills">
+
+<span class="tag">Photoshop</span>
+<span class="tag">Illustrator</span>
+<span class="tag">Canva</span>
+<span class="tag">Figma</span>
+<span class="tag">Identidade Visual</span>
+<span class="tag">Social Media</span>
+<span class="tag">Apresentações</span>
+<span class="tag">Banners</span>
+<span class="tag">Edição de Imagem</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+  <section class="section" id="projetos">
+<div class="container">
+
+<h2 class="section-title">Projetos em destaque</h2>
+<p class="section-subtitle"></p>
+
+<div class="projects-grid">
+
+<article class="project">
+<div class="project-image" style="background-image:url('images/projeto-1.jpg');"></div>
+<div class="project-content">
+<h3>Social Media</h3>
+<p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+<div class="project-links">
+<a class="small-btn" href="images/projeto-1.jpg" target="_blank">Ver imagem</a>
+</div>
+</div>
+</article>
+
+<article class="project">
+<div class="project-image" style="background-image:url('images/projeto-2.jpg');"></div>
+<div class="project-content">
+<h3>Social Media</h3>
+<p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+<div class="project-links">
+<a class="small-btn" href="images/projeto-2.jpg" target="_blank">Ver imagem</a>
+</div>
+</div>
+</article>
+
+<article class="project">
+<div class="project-image" style="background-image:url('images/projeto-3.jpg');"></div>
+<div class="project-content">
+<h3>Banner Promocional</h3>
+<p>Material gráfico para divulgação de produtos, serviços ou eventos em mídia digital e impressa.</p>
+<div class="project-links">
+<a class="small-btn" href="images/projeto-3.jpg" target="_blank">Ver imagem</a>
+</div>
+</div>
+</article>
+
+<article class="project">
+<div class="project-image" style="background-image:url('images/projeto-4.jpg');"></div>
+<div class="project-content">
+<h3>Social Media</h3>
+<p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+<div class="project-links">
+<a class="small-btn" href="images/projeto-4.jpg" target="_blank">Ver imagem</a>
+</div>
+</div>
+</article>
+
+<article class="project">
+<div class="project-image" style="background-image:url('images/projeto-5.jpg');"></div>
+<div class="project-content">
+<h3>Social Media</h3>
+<p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+<div class="project-links">
+<a class="small-btn" href="images/projeto-5.jpg" target="_blank">Ver imagem</a>
+</div>
+</div>
+</article>
+
+<article class="project">
+<div class="project-image" style="background-image:url('images/projeto-6.jpg');"></div>
+<div class="project-content">
+<h3>Social Media</h3>
+<p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+<div class="project-links">
+<a class="small-btn" href="images/projeto-6.jpg" target="_blank">Ver imagem</a>
+</div>
+</div>
+</article>
+
+  <article class="project">
+<div class="project-image" style="background-image:url('images/projeto-7.jpg');"></div>
+<div class="project-content">
+<h3>Social Media</h3>
+<p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+<div class="project-links">
+<a class="small-btn" href="images/projeto-6.jpg" target="_blank">Ver imagem</a>
+</div>
+</div>
+</article>
+
+  <article class="project">
+<div class="project-image" style="background-image:url('images/projeto-8.jpg');"></div>
+<div class="project-content">
+<h3>Social Media</h3>
+<p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+<div class="project-links">
+<a class="small-btn" href="images/projeto-6.jpg" target="_blank">Ver imagem</a>
+</div>
+</div>
+</article>
+
+  <article class="project">
+<div class="project-image" style="background-image:url('images/projeto-9.jpg');"></div>
+<div class="project-content">
+<h3>Social Media</h3>
+<p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+<div class="project-links">
+<a class="small-btn" href="images/projeto-6.jpg" target="_blank">Ver imagem</a>
+</div>
+</div>
+</article>
+
+  <article class="project">
+<div class="project-image" style="background-image:url('images/projeto-10.jpg');"></div>
+<div class="project-content">
+<h3>Social Media</h3>
+<p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+<div class="project-links">
+<a class="small-btn" href="images/projeto-6.jpg" target="_blank">Ver imagem</a>
+</div>
+</div>
+</article>
+
+<article class="project">
+<div class="project-image" style="background-image:url('images/projeto-11.jpg');"></div>
+<div class="project-content">
+<h3>Social Media</h3>
+<p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+<div class="project-links">
+<a class="small-btn" href="images/projeto-6.jpg" target="_blank">Ver imagem</a>
+</div>
+</div>
+</article>
+  
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="curriculo">
+<div class="container">
+
+<h2 class="section-title">Currículo</h2>
+<p class="section-subtitle"></p>
+
+<div class="resume-grid">
+
+<div class="card">
+<h3>Experiência</h3>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<strong>Designer Gráfico Freelancer</strong>
+<span class="muted">2024 - Atual</span>
+<p class="muted">Posts para redes sociais, banners e materiais promocionais.</p>
+</div>
+
+<div class="timeline-item">
+<strong>Projetos Acadêmicos e Apresentações</strong>
+<span class="muted">2021</span>
+<p class="muted">Desenvolvimento de layouts, slides e materiais visuais para apresentações de cursos e projetos.</p>
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>Formação e Ferramentas</h3>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<strong>Design gráfico</strong>
+<span class="muted">em 2021</span>
+<p class="muted">Cursos online de montagem pro e ambientação</p>
+</div>
+
+<div class="timeline-item">
+<strong>Ferramentas principais</strong>
+<span class="muted">Photoshop • Illustrator • Canva • Figma</span>
+<p class="muted">InDesign, CapCut.</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="contato">
+<div class="container">
+
+<h2 class="section-title">Contato</h2>
+<p class="section-subtitle"></p>
+
+<div class="contact-grid">
+
+<div class="card">
+<h3>Informações</h3>
+
+<div class="contact-list">
+
+<div class="contact-item">
+<strong>Email:</strong><br>
+limmateech@gmail.com
+</div>
+
+<div class="contact-item">
+<strong>Instagram:</strong><br>
+@anjurtech
+</div>
+
+<div class="contact-item">
+<strong>LinkedIn:</strong><br>
+https://www.linkedin.com/in/ailton-lima-junior-4109033a0/
+</div>
+
+<div class="contact-item">
+<strong>WhatsApp:</strong><br>
+(71) 988042041 e (71) 993607039
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>Resumo rápido</h3>
+
+<p class="muted">
+Designer gráfico com foco em soluções visuais modernas, organização de conteúdo e apresentação profissional.
+Disponível para trabalhos freelance, PJ, CLT, projetos institucionais, peças digitais e criação de identidade visual.
+</p>
+
+<div class="cta-row" style="margin-top: 18px;">
+<a class="btn btn-primary" href="limmateech@gmail.com">Enviar email</a>
+<a class="btn btn-secondary" href="https://www.instagram.com/anjurtech/" target="_blank">Abrir Instagram</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<footer>
+<div class="container">
+© 2026 • Portfólio Design Gráfico • Ailton Junior
+</div>
+</footer>
 
 </body>
 </html>
