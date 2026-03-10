@@ -6,17 +6,22 @@
   <title>Portfólio | Designer Gráfico</title>
   <style>
     :root {
-      --bg: #0b0d12;
-      --card: #121722;
-      --card-2: #171d2a;
-      --text: #f5f7fb;
-      --muted: #a8b0c0;
-      --line: rgba(255,255,255,0.08);
-      --accent: #7c5cff;
-      --accent-2: #21c7a8;
-      --shadow: 0 20px 60px rgba(0,0,0,0.35);
-      --radius: 22px;
-      --max: 1120px;
+  --bg: #0b0d12;
+  --card: #121722;
+  --card-2: #171d2a;
+
+  --text: #f5f7fb;
+  --muted: #9ca3af;
+
+  --accent: #ff6a00;
+  --accent-2: #ff9f43;
+
+  --line: rgba(255,255,255,0.08);
+  --shadow: 0 20px 60px rgba(0,0,0,0.35);
+
+  --radius: 22px;
+  --max: 1120px;
+}
     }
 
     * { box-sizing: border-box; }
@@ -26,7 +31,7 @@
       font-family: Inter, Arial, Helvetica, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top right, rgba(124,92,255,0.18), transparent 25%),
+        radial-gradient(circle at top right, rgba(255,122,0,0.18), transparent 25%),
         radial-gradient(circle at left center, rgba(33,199,168,0.10), transparent 22%),
         var(--bg);
       line-height: 1.6;
@@ -101,9 +106,9 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      border: 1px solid rgba(124,92,255,0.28);
-      background: rgba(124,92,255,0.12);
-      color: #d8cffc;
+      border: 1px solid rgba(255,122,0,0.28);
+      background: rgba(255,122,0,0.12);
+      color: #ffd3ad;
       border-radius: 999px;
       padding: 8px 14px;
       font-size: 0.86rem;
@@ -146,7 +151,7 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #9b7cff);
+      background: linear-gradient(135deg, var(--accent), #ff9a3d);
       border-color: transparent;
     }
 
@@ -173,7 +178,7 @@
     }
 
     .profile-box {
-      background: linear-gradient(180deg, rgba(124,92,255,0.18), rgba(255,255,255,0.04));
+      background: linear-gradient(180deg, rgba(255,122,0,0.18), rgba(255,255,255,0.04));
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 22px;
       overflow: hidden;
@@ -326,7 +331,7 @@
     }
 
     .timeline-item {
-      border-left: 2px solid rgba(124,92,255,0.35);
+      border-left: 2px solid rgba(255,122,0,0.35);
       padding-left: 16px;
     }
 
@@ -391,8 +396,8 @@
         <div class="eyebrow">Designer Gráfico • Portfólio + Currículo</div>
         <h1>Crio identidades visuais, peças digitais e apresentações com visual profissional.</h1>
         <p class="lead">
-          Olá, meu nome é <strong>Ailton Lima Junior</strong>. Sou designer gráfico com foco em
-          Web Design, social media, materiais promocionais e design para apresentações.
+          Olá, meu nome é <strong>SEU NOME AQUI</strong>. Sou designer gráfico com foco em
+          identidade visual, social media, materiais promocionais e design para apresentações.
           Este site reúne meus principais projetos, habilidades e experiências.
         </p>
         <div class="cta-row">
@@ -406,29 +411,34 @@
         </div>
       </div>
 
-     <div class="profile-card card">
-  <div class="profile-box">
-    <div class="profile-photo"></div>
-    <div class="profile-content">
-      <div class="role">Designer Gráfico</div>
+      <div class="profile-card card">
+        <div class="profile-box">
+          <div class="profile-photo"></div>
+          <div class="profile-content">
+            <div class="role">Designer Gráfico</div>
+            <p>
+              Troque a imagem <strong>images/perfil.jpg</strong> pela sua foto. Você também pode usar
+              uma arte pessoal ou sua logo para deixar o portfólio com sua identidade visual.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   </header>
 
   <section class="section" id="sobre">
     <div class="container">
       <h2 class="section-title">Sobre mim</h2>
       <p class="section-subtitle">
-        
+        Aqui você apresenta quem é, qual seu estilo de trabalho e como você gera valor para clientes, empresas e projetos.
       </p>
 
       <div class="about-grid">
         <div class="card">
           <h3>Apresentação profissional</h3>
           <p class="muted">
-            Técnico em informática e estudante de back-end em python, graduado em design gráfico e apaixonado por criar soluções visuais que unem estética, comunicação e estratégia.
-            Tenho experiência de posts para redes sociais, banners, identidade visual e layouts profissionais.
+            Sou um designer gráfico apaixonado por criar soluções visuais que unem estética, comunicação e estratégia.
+            Tenho experiência no desenvolvimento de logos, posts para redes sociais, banners, identidade visual e layouts profissionais.
           </p>
           <div class="stats">
             <div class="stat">
@@ -448,7 +458,7 @@
 
         <div class="card">
           <h3>Habilidades</h3>
-          <p class="muted"></p>
+          <p class="muted">Edite os tópicos abaixo com aquilo que você realmente domina.</p>
           <div class="skills">
             <span class="tag">Photoshop</span>
             <span class="tag">Illustrator</span>
@@ -469,15 +479,15 @@
     <div class="container">
       <h2 class="section-title">Projetos em destaque</h2>
       <p class="section-subtitle">
-        
+        Substitua cada imagem pelos seus trabalhos. Crie a pasta <strong>images</strong> e coloque os arquivos com os mesmos nomes ou altere no código.
       </p>
 
       <div class="projects-grid">
         <article class="project">
           <div class="project-image" style="background-image:url('images/projeto-1.jpg');"></div>
           <div class="project-content">
-           <h3>Social Media</h3>
-            <p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+            <h3>Identidade Visual</h3>
+            <p>Projeto de construção de marca com logo, paleta de cores, tipografia e aplicações visuais.</p>
             <div class="project-links">
               <a class="small-btn" href="images/projeto-1.jpg" target="_blank">Ver imagem</a>
             </div>
@@ -509,8 +519,8 @@
         <article class="project">
           <div class="project-image" style="background-image:url('images/projeto-4.jpg');"></div>
           <div class="project-content">
-            <h3>Social Media</h3>
-            <p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+            <h3>Apresentação Profissional</h3>
+            <p>Slides e materiais visuais com estética moderna para trabalhos acadêmicos, institucionais ou comerciais.</p>
             <div class="project-links">
               <a class="small-btn" href="images/projeto-4.jpg" target="_blank">Ver imagem</a>
             </div>
@@ -520,8 +530,8 @@
         <article class="project">
           <div class="project-image" style="background-image:url('images/projeto-5.jpg');"></div>
           <div class="project-content">
-            <h3>Social Media</h3>
-            <p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+            <h3>Logo Design</h3>
+            <p>Desenvolvimento de logotipos com proposta visual alinhada ao posicionamento da marca.</p>
             <div class="project-links">
               <a class="small-btn" href="images/projeto-5.jpg" target="_blank">Ver imagem</a>
             </div>
@@ -531,8 +541,8 @@
         <article class="project">
           <div class="project-image" style="background-image:url('images/projeto-6.jpg');"></div>
           <div class="project-content">
-           <h3>Social Media</h3>
-            <p>Peças para Instagram e campanhas digitais com foco em impacto visual e comunicação clara.</p>
+            <h3>Projeto Extra</h3>
+            <p>Espaço para inserir mais um trabalho forte e mostrar variedade no seu portfólio.</p>
             <div class="project-links">
               <a class="small-btn" href="images/projeto-6.jpg" target="_blank">Ver imagem</a>
             </div>
@@ -546,7 +556,7 @@
     <div class="container">
       <h2 class="section-title">Currículo</h2>
       <p class="section-subtitle">
-       
+        Como você também vai usar este site como currículo, esta parte resume formação, experiências e ferramentas.
       </p>
 
       <div class="resume-grid">
@@ -556,11 +566,11 @@
             <div class="timeline-item">
               <strong>Designer Gráfico Freelancer</strong>
               <span class="muted">2024 - Atual</span>
-              <p class="muted">Posts para redes sociais, banners e materiais promocionais.</p>
+              <p class="muted">Criação de identidades visuais, posts para redes sociais, banners e materiais promocionais para clientes diversos.</p>
             </div>
             <div class="timeline-item">
               <strong>Projetos Acadêmicos e Apresentações</strong>
-              <span class="muted">2021</span>
+              <span class="muted">2023 - Atual</span>
               <p class="muted">Desenvolvimento de layouts, slides e materiais visuais para apresentações de cursos e projetos.</p>
             </div>
           </div>
@@ -570,14 +580,14 @@
           <h3>Formação e Ferramentas</h3>
           <div class="timeline">
             <div class="timeline-item">
-              <strong>Design gráfico</strong>
-              <span class="muted">em 2021</span>
-              <p class="muted">Cursos online de montagem pro e ambientação</p>
+              <strong>Técnico em Informática e Design Gráfico</strong>
+              <span class="muted">Edite com sua formação real</span>
+              <p class="muted">Inclua aqui curso técnico, graduação, certificações ou especializações.</p>
             </div>
             <div class="timeline-item">
               <strong>Ferramentas principais</strong>
               <span class="muted">Photoshop • Illustrator • Canva • Figma</span>
-              <p class="muted">InDesign, CapCut.</p>
+              <p class="muted">Você pode trocar ou acrescentar CorelDRAW, InDesign, CapCut, Premiere ou outras ferramentas que utiliza.</p>
             </div>
           </div>
         </div>
@@ -589,17 +599,17 @@
     <div class="container">
       <h2 class="section-title">Contato</h2>
       <p class="section-subtitle">
-       
+        Adicione aqui seus canais para recrutadores, clientes e parceiros entrarem em contato.
       </p>
 
       <div class="contact-grid">
         <div class="card">
           <h3>Informações</h3>
           <div class="contact-list">
-            <div class="contact-item"><strong>Email:</strong><br>limmateech@gmail.com</div>
-            <div class="contact-item"><strong>Instagram:</strong><br>@anjurtech</div>
-            <div class="contact-item"><strong>LinkedIn:</strong><br>https://www.linkedin.com/in/ailton-lima-junior-4109033a0/</div>
-            <div class="contact-item"><strong>WhatsApp:</strong><br>(71) 988042041 e (71) 993607039</div>
+            <div class="contact-item"><strong>Email:</strong><br>seuemail@exemplo.com</div>
+            <div class="contact-item"><strong>Instagram:</strong><br>@seuinstagram</div>
+            <div class="contact-item"><strong>LinkedIn:</strong><br>linkedin.com/in/seuperfil</div>
+            <div class="contact-item"><strong>WhatsApp:</strong><br>(71) 99999-9999</div>
           </div>
         </div>
 
@@ -607,11 +617,11 @@
           <h3>Resumo rápido</h3>
           <p class="muted">
             Designer gráfico com foco em soluções visuais modernas, organização de conteúdo e apresentação profissional.
-            Disponível para trabalhos freelance, PJ, CLT, projetos institucionais, peças digitais e criação de identidade visual.
+            Disponível para trabalhos freelance, projetos institucionais, peças digitais e criação de identidade visual.
           </p>
           <div class="cta-row" style="margin-top: 18px;">
-            <a class="btn btn-primary" href="limmateech@gmail.com">Enviar email</a>
-            <a class="btn btn-secondary" href="https://www.instagram.com/anjurtech/" target="_blank">Abrir Instagram</a>
+            <a class="btn btn-primary" href="mailto:seuemail@exemplo.com">Enviar email</a>
+            <a class="btn btn-secondary" href="https://www.instagram.com/" target="_blank">Abrir Instagram</a>
           </div>
         </div>
       </div>
@@ -620,7 +630,7 @@
 
   <footer>
     <div class="container">
-      © 2026 • Portfólio Design Gráfico • Ailton Junior  
+      © 2026 • Portfólio profissional para GitHub Pages • Edite os textos, imagens e links com seus dados.
     </div>
   </footer>
 </body>
